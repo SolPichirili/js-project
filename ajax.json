@@ -1,0 +1,28 @@
+{
+    "results": [
+        { 
+            "id": 1, 
+            "tiempo": "1 mes", 
+            "precio": "$300", 
+            "img": "imagenes/mes.png"
+        },
+        { 
+            "id": 2, 
+            "tiempo": "3 meses", 
+            "precio": "$750", 
+            "img": "imagenes/3meses.png" 
+        },
+        { 
+            "id": 3, 
+            "tiempo": "6 meses", 
+            "precio": "$1500", 
+            "img": "imagenes/6meses.png" 
+        },
+        { 
+            "id": 4, 
+            "tiempo": "1 año", 
+            "precio": "$3000", 
+            "img": "imagenes/1anio.png" 
+        }
+    ]
+}

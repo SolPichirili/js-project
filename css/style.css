@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.menuPrincipal {
+    background-color: black;
+    font-family: 'Newsreader', serif;
+}
+
+.botonRegistro {
+    font-size: 0.8rem;
+    margin-left: 15rem;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.fondo {
+    background-image: url(/imagenes/castillo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Newsreader', serif;
+    font-size: 4rem;
+    color: #061066;
+    justify-self: center;
+}
+
+.titulos {
+    font-family: 'Newsreader', serif;
+    font-size: 2rem;
+    margin: 2rem auto;
+}
+
+.imgCastillo {
+    margin-top: 2rem;
+    border: 1rem solid grey;
+    border-radius: 0.3rem;
+}
+
+.titulosSecciones{
+    font-family: 'Newsreader', serif;
+    font-size: 2rem;
+    margin-top: 14rem;
+}
+
+.parrafos {
+    font-family: 'Newsreader', serif;
+    font-size: 1.2rem;
+    margin: 2rem auto;
+    text-align: justify;
+}
+
+.botonGris {
+    font-family: 'Newsreader', serif;
+    font-weight: bolder;
+    background-color: grey;
+    border: 0.1rem solid grey;
+    border-radius: 0.5rem;
+}
+
+.cesto {
+    padding: 0.2rem;
+    width: 20%;
+}
+
+.imagenesPersj {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.label {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.botonNegro {
+    padding: 0.5rem;
+    width: 50%;
+}
+
+.suscripciones {
+    display: grid;
+    grid-template-columns: repeat(4, 40fr);
+}
+
+label {
+    font-family: 'Newsreader', serif;
+}
+
+.botonAgregar {
+    border-radius: 0.5rem;
+    border: 0.2rem solid grey;
+    background-color: black;
+    color: white;
+    font-family: 'Newsreader', serif;
+    padding: 0.4rem;
+}
+
+.boton {
+    border-radius: 0.5rem;
+    border: 0.2rem solid grey;
+    background-color: black;
+    color: white;
+    font-family: 'Newsreader', serif;
+}
+
+.botonReset {
+    border-radius: 0.5rem;
+    border: 0.2rem solid grey;
+    background-color: black;
+    color: white;
+    font-family: 'Newsreader', serif;
+}
+
+footer {
+    margin-top: 6rem;
+    background-color: #99b2dd;
+}
+
+.menuAlPie {
+    font-family: 'Newsreader', serif;
+    list-style: none;
+    padding: 1rem;
+}
+
+.menuAlPie li a {
+    text-decoration: none;
+    color: black;
+}
