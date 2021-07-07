@@ -13,10 +13,21 @@ body {
     font-family: 'Newsreader', serif;
 }
 
+.menuPrincipal a {
+    color: #99b2dd;
+}
+
+.menuPrincipal a:hover{
+    color: #061066;
+}
+
 .botonRegistro {
+    background-color: #061066;
+    color: white;
     font-size: 0.8rem;
     margin-left: 15rem;
     padding: 0.5rem;
+    border-color: #99b2dd;
     border-radius: 0.4rem;
 }
 

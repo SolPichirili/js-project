@@ -1,10 +1,10 @@
 //Ingresar como usuario
 const arrayDeDatos = [];
 
-let registro = document.getElementById(`botonRegistrar`);
-let primeraVez = document.getElementById(`botonUsuario`);
-let primeraVezModal = document.getElementById(`cuerpoModal`);
-let tituloModal = document.getElementById(`modalTitulo`);
+let registro = document.querySelector(`#botonRegistrar`);
+let primeraVez = document.querySelector(`#botonUsuario`);
+let primeraVezModal = document.querySelector(`#cuerpoModal`);
+let tituloModal = document.querySelector(`#modalTitulo`);
 
 function recuperar() {
     let recupero = JSON.parse(localStorage.getItem(`usuario`));
@@ -23,9 +23,9 @@ function comenzar() {
 
 function tomarDatos(e) {
     e.preventDefault()
-    let nombre = document.getElementById(`name`).value;
-    let edad = document.getElementById(`edad`).value;
-    let experiencia = document.getElementById(`exp`).value;
+    let nombre = document.querySelector(`#name`).value;
+    let edad = document.querySelector(`#edad`).value;
+    let experiencia = document.querySelector(`#exp`).value;
 
     if (nombre && edad && experiencia != 0) {
         class Usuario {
@@ -128,6 +128,7 @@ const elfx = new Personaje(`elfx`, `Destreza`, `A favor de El Reino`, `Arco y fl
 
 
 //Creación de elementos en HTML con jQuery
+
 $(`#brujx`).append(`<p class="parrafos">Poder: ${brujx.poder}</p>
                     <p class="parrafos">Afiliación: ${brujx.afiliacion}</p>
                     <p class="parrafos">Arma: ${brujx.arma}</p>`
@@ -156,7 +157,7 @@ const personajes = [brujx, caballerx, orcx, elfx];
 // Elegir Personaje
 function mostrarPersonajes(array) {
     array.forEach((persj) => {
-        let prueba = document.getElementById(`modalPersonajes`);
+        let prueba = document.querySelector(`#modalPersonajes`);
         let ficha = document.createElement(`div`)
 
         ficha.innerHTML += `<img src="${persj.imagen}" id="imgPersj${persj.id}">`
@@ -272,6 +273,7 @@ function actualizarCarrito() {
 }
 
 function agregarAlCarrito(id) {
+    $(`#carroVacio`).hide();
     let agregarSuscripcion = arraySuscripciones.filter((el) => el.id == id)[0];
     carritoDeCompras.push(agregarSuscripcion);
 
@@ -289,6 +291,7 @@ function agregarAlCarrito(id) {
     botonEliminar.addEventListener(`click`, () => {
         botonEliminar.parentElement.remove();
         carritoDeCompras = carritoDeCompras.filter((el) => el.id != agregarSuscripcion.id);
+        $(`#carroVacio`).show();
     })
 
     actualizarCarrito()
