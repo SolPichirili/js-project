@@ -23,7 +23,7 @@
         <nav class="menuPrincipal navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html"><img src="imagenes/logo.png" alt="logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <button class="navbar-toggler navbar-dark bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -33,33 +33,33 @@
                             <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="menuAbout">Sobre el Juego</a>
+                            <a class="nav-link" id="menuAbout" href="#about">Sobre el Juego</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="menuPersonajxs">Personajxs</a>
+                            <a class="nav-link" id="menuPersonajxs" href="#personajxs">Personajxs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="menuPrueba">Versión de Prueba</a>
+                            <a class="nav-link" id="menuPrueba" href="#prueba">Versión de Prueba</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="menuSuscripcion">Suscribirse</a>
+                            <a class="nav-link" id="menuSuscripcion" href="#suscripcion">Suscribirse</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="menuSoporte">Soporte</a>
+                            <a class="nav-link" id="menuSoporte" href="#soporte">Soporte</a>
                         </li>
                     </ul>
                     <!-- Botón de Registro -->
                     <button type="button" class="botonRegistro" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         id="botonUsuario">¿Es esta la primera vez que ingresa a nuestro sitio?</button>
                     <!-- Modal de la sección de Registro -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade fondo" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
-                            <div class="modal-content">
+                            <div class="modal-content modals">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="modalTitulo">Por favor complete la información debajo:
                                     </h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body" id="cuerpoModal">
@@ -79,7 +79,7 @@
                                             <input type="text" class="form-control" name="exp" id="exp">
                                         </div>
                                         <input class="boton btn" type="submit" value="Registrarse" id="botonRegistrar">
-                                        <input class="botonReset btn" type="reset" value="Limpiar">
+                                        <input class="boton btn" type="reset" value="Limpiar">
                                     </form>
                                 </div>
                             </div>
@@ -87,23 +87,19 @@
                     </div>
                     <!-- Botón del Carrito -->
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#carrito"><i
-                            class="fas fa-cart-arrow-down"></i></button>
+                            class="fas fa-cart-arrow-down iconoCarro"></i></button>
                     <!-- Modal del Carrito -->
-                    <div class="modal fade" id="carrito" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    <div class="modal fade fondo" id="carrito" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
-                            <div class="modal-content">
+                            <div class="modal-content modals">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">¡Suscribite ahora!</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body" id="contenedorCarrito">
                                     <p class="parrafos" id="carroVacio">Su carrito está vacío.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -113,20 +109,20 @@
         </nav>
     </header>
     <main>
-        <div class="container-fluid fondo">
-            <h1 class="row">REINO MAGICO</h1>
+        <div class="container">
+            <h1 class="col-12 text-center">REINO MAGICO</h1>
         </div>
         <!-- Sobre el Juego -->
-        <section id="about" class="container">
-            <h2 class="row titulos">Sobre el Juego...</h2>
-            <p class="row parrafos text-center">Reino mágino es un juego de rol que presenta diferentes personajes y
-                misiones a cumplir.
-                Todxs tienen diferentes poderes y características que les hacen únicxs.</p>
+        <section id="about" class="container aboutUs">
+            <h2 class="col-12 tituloAbout">Sobre el Juego...</h2>
+            <p class="col-12 parrafos text-center">Reino mágino es un juego de rol que presenta diferentes personajes y
+                misiones a cumplir.</p>
+            <p class="col-12 parrafos text-center">Todxs tienen diferentes poderes y características que les hacen únicxs.</p>
         </section>
         <!-- Personajxs -->
         <section id="personajxs" class="container">
             <div class="row">
-                <h3 class="row titulosSecciones">Personajxs</h3>
+                <h3 class="row titulos">Personajxs</h3>
                 <div class="col-6">
                     <div class="row" id="brujx">
                         <p class="parrafos">Brujx</p>
@@ -168,19 +164,19 @@
         </section>
         <!-- Juego de Prueba -->
         <section id="prueba" class="container">
-            <h4 class="titulosSecciones">Versión de prueba</h4>
+            <h4 class="titulos">Versión de prueba</h4>
             <div class="batalla text-center">
                 <p class="parrafos text-center">Luego de ver las características de cada personaje, por favor, haga
                     click sobre el siguiente botón para dar comienzo:</p>
-                <button type="button" class="botonGris btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">¡A
+                <button type="button" class="boton btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">¡A
                     jugar!</button>
-                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade fondo" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
-                        <div class="modal-content">
+                        <div class="modal-content modals">
                             <div class="modal-header">
                                 <h5 class="parrafos modal-title" id="exampleModalLabel">¡Prepárese!</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modalBatalla modal-body row">
@@ -189,7 +185,7 @@
                                 </div>
                                 <div class="col-6" id="modalElegido">
                                     <button id="botonAndar" style="display: none;"
-                                        class="boton botonNegro">Andar</button>
+                                        class="boton botonPrueba">Andar</button>
                                 </div>
                                 <div id="modalAndar" class="row">
                                     <p style="display: none;" id="monstruo" class="parrafos">¡Cuidado! Se acerca un
@@ -197,17 +193,15 @@
                                     <div class="col-6" id="modalMonstruo">
                                     </div>
                                     <div class="col-6" id="botonesMonstruo">
-                                        <button id="botonAtacar" class="boton botonNegro"
+                                        <button id="botonAtacar" class="boton botonPrueba"
                                             style="display: none;">Atacar</button>
                                         <button id="botonHuir" style="display: none;"
-                                            class="boton botonNegro">Huir</button>
-                                        <input type="text" id="respuesta" style="display: none;" class="label">
+                                            class="boton botonPrueba huir">Huir</button>
+                                        <input type="text" id="respuesta" style="display: none;" class="labelPrueba">
                                         <button id="botonRespuesta" style="display: none;"
-                                            class="boton botonNegro">Enviar</button>
+                                            class="boton botonPrueba">Enviar</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
                             </div>
                         </div>
                     </div>
@@ -219,13 +213,13 @@
         </section>
         <!-- Suscripción -->
         <section id="suscripcion" class="container">
-            <h5 class="titulosSecciones">Suscripción</h5>
+            <h5 class="titulos">Suscripción</h5>
             <p class="parrafos">Mira nuestras ofertas:</p>
             <div id="comprar" class="suscripciones row"></div>
         </section>
         <!-- Formulario de contacto -->
         <section id="soporte" class="container">
-            <h6 class="titulosSecciones">Soporte</h6>
+            <h6 class="titulos">Soporte</h6>
             <form action="" name="formulario" method="POST" id="formulario">
                 <div class="mb-3">
                     <label class="name">Nombre completo</label>

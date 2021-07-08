@@ -13,6 +13,7 @@ function recuperar() {
 
 function comenzar() {
     if (localStorage.usuario) {
+        $(`#botonUsuario`).animate({ marginLeft: `25rem` });
         primeraVez.innerText = `Bienvenidx ${arrayDeDatos[0].nombre}`;
         tituloModal.remove();
         primeraVezModal.innerHTML = `<p class="parrafos">Ya se encuentra registradx.</p>`
@@ -38,8 +39,10 @@ function tomarDatos(e) {
             bienvenida() {
                 swal({
                     text: `¡Bienvenidx a una nueva aventura!`,
+                    className: "sweetWelcome",
                 });
                 primeraVez.innerText = `Bienvenidx ${this.nombre}`;
+                $(`#botonUsuario`).animate({ marginLeft: `25rem` });
                 tituloModal.remove();
                 primeraVezModal.innerHTML = `<p class="parrafos">Ya se encuentra registradx.</p>`
             }
@@ -53,6 +56,7 @@ function tomarDatos(e) {
     } else {
         swal({
             text: `Por favor complete todos los campos.`,
+            className: "sweetWelcome",
         });
     }
 }
@@ -168,6 +172,7 @@ function mostrarPersonajes(array) {
             $(`#modalPersonajes`).html(`<img src="${persj.imagen}">`)
             $(`#modalElegido`).prepend(`<p>Bienvenidx guerrerx, emprenderás desde hoy el camino del bosque que impuso el reino para ti. Comienza la aventura.</p>`).addClass(`parrafos`).fadeIn(1000)
             $(`#botonAndar`).fadeIn(1000).one(`click`, function () {
+                $(`#botonAndar`).remove()
                 $(`#modalAndar`).prepend(`<img src="imagenes/giphy.gif" class="img-fluid">`)
                 $(`#monstruo`).slideDown(3000)
                 $(`#modalMonstruo`).append(`<img src="imagenes/monstrux.jpg" class="img-fluid">`).delay(2000)
@@ -190,6 +195,7 @@ const ambxsVivxs = () => { return vidaPersonaje > 0 && vidaMonstruo > 0 };
 
 $(`#botonAtacar`).one(`click`, function () {
     $(`#botonHuir`).remove()
+    $(`#botonAtacar`).remove()
     while (ambxsVivxs()) {
         vidaPersonaje -= atacar();
         console.log(`La energía de su personaje es de ${vidaPersonaje}`);
@@ -209,10 +215,12 @@ $(`#botonAtacar`).one(`click`, function () {
 //Huida
 $(`#botonHuir`).one(`click`, function () {
     $(`#botonAtacar`).remove()
+    $(`#botonHuir`).remove()
     $(`#botonesMonstruo`).prepend(`<p>Para escapar del temible monstruo, deberá responder lo siguiente: ¿Cuánto es 800 x 350?</p><br>`).addClass(`parrafos`)
     $(`#respuesta`).fadeIn(1000).delay(1000)
     $(`#botonRespuesta`).fadeIn(1000).one(`click`, function () {
-        let valor = document.getElementById(`respuesta`).value
+        $(`#botonRespuesta`).remove()
+        let valor = document.querySelector(`#respuesta`).value
         if (valor == `280000`) {
             $(`#botonesMonstruo`).append(`<p>Ha ganado.</p>`)
         } else {
@@ -304,7 +312,8 @@ function validarNombre(e) {
     if (formulario.nombre.value == 0) {
         swal({
             icon: "error",
-            text: "Por favor coloque su nombre en el formulario."
+            text: "Por favor coloque su nombre en el formulario.",
+            className: "sweetWelcome",
         });
     }
 }
@@ -314,7 +323,8 @@ function validarMail(e) {
     if (formulario.mail.value == 0) {
         swal({
             icon: "error",
-            text: "Por favor coloque su correo en el formulario."
+            text: "Por favor coloque su correo en el formulario.",
+            className: "sweetWelcome",
         });
     }
 }
@@ -324,7 +334,8 @@ function validarConsulta(e) {
     if (formulario.question.value == 0) {
         swal({
             icon: "error",
-            text: "Por favor coloque su consulta en el formulario."
+            text: "Por favor coloque su consulta en el formulario.",
+            className: "sweetWelcome",
         });
     }
 }
@@ -350,12 +361,14 @@ function enviar(e) {
         }).done(function () {
             swal({
                 icon: "success",
-                text: "Su formulario ha sido enviado."
+                text: "Su formulario ha sido enviado.",
+                className: "sweetWelcome",
             });
         }).fail(function (error) {
             swal({
                 icon: "error",
-                text: 'Oops... ' + JSON.stringify(error)
+                text: 'Oops... ' + JSON.stringify(error),
+                className: "sweetWelcome",
             });
         });
 

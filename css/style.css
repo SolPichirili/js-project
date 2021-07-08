@@ -5,12 +5,17 @@
 }
 
 body {
+    background-image: url(/imagenes/castillo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     background-color: black;
 }
 
 .menuPrincipal {
     background-color: black;
     font-family: 'Newsreader', serif;
+    font-size: 1.05rem;
 }
 
 .menuPrincipal a {
@@ -24,43 +29,73 @@ body {
 .botonRegistro {
     background-color: #061066;
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-left: 15rem;
     padding: 0.5rem;
     border-color: #99b2dd;
     border-radius: 0.4rem;
 }
 
+.iconoCarro {
+    color: #99b2dd;
+}
+
 .fondo {
     background-image: url(/imagenes/castillo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+}
+
+.modals{
+    background-color: black;
+    color: #99b2dd;
+}
+
+.boton {
+    border-radius: 0.5rem;
+    border: 0.2rem solid #99b2dd;
+    background-color: black;
+    color: #99b2dd;
+    font-family: 'Newsreader', serif;
+}
+
+.boton:hover{
+    background-color: #061066;
+    color: white;
+}
+
+.sweetWelcome {
+    background-color: black;
+}
+
+.swal-text {
+    color: #99b2dd;
+    font-family: 'Newsreader', serif;
 }
 
 h1 {
     font-family: 'Newsreader', serif;
     font-size: 4rem;
+    color: black;
+    margin-top: 12rem;
+}
+
+.aboutUs{
+    margin-top: 25rem;
+    border: 0.2rem solid #99b2dd;
+    border-radius: 0.6rem;
+    padding: 2rem;
+}
+
+.tituloAbout {
+    font-family: 'Newsreader', serif;
+    font-size: 2rem;
     color: #061066;
-    justify-self: center;
 }
 
 .titulos {
     font-family: 'Newsreader', serif;
     font-size: 2rem;
-    margin: 2rem auto;
-}
-
-.imgCastillo {
-    margin-top: 2rem;
-    border: 1rem solid grey;
-    border-radius: 0.3rem;
-}
-
-.titulosSecciones{
-    font-family: 'Newsreader', serif;
-    font-size: 2rem;
-    margin-top: 14rem;
+    margin-top: 10rem;
+    color: #061066;
 }
 
 .parrafos {
@@ -68,6 +103,8 @@ h1 {
     font-size: 1.2rem;
     margin: 2rem auto;
     text-align: justify;
+    color: #99b2dd;
+    font-weight: 200;
 }
 
 .botonGris {
@@ -89,14 +126,18 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.label {
+.labelPrueba {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-.botonNegro {
+.botonPrueba {
     padding: 0.5rem;
     width: 50%;
+}
+
+.huir{
+    margin-top: 1rem;
 }
 
 .suscripciones {
@@ -117,13 +158,6 @@ label {
     padding: 0.4rem;
 }
 
-.boton {
-    border-radius: 0.5rem;
-    border: 0.2rem solid grey;
-    background-color: black;
-    color: white;
-    font-family: 'Newsreader', serif;
-}
 
 .botonReset {
     border-radius: 0.5rem;
