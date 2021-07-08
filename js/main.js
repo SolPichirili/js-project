@@ -325,14 +325,12 @@ function agregarAlCarrito(id) {
 }
 
 //Formulario
-
 function validarNombre(e) {
     e.preventDefault();
     if (formulario.nombre.value == 0) {
         swal({
             icon: "error",
-            text: "Por favor coloque su nombre en el formulario.",
-            className: "sweetWelcome",
+            text: "Por favor coloque su nombre en el formulario."
         });
     }
 }
@@ -343,7 +341,7 @@ function validarMail(e) {
         swal({
             icon: "error",
             text: "Por favor coloque su correo en el formulario.",
-            className: "sweetWelcome",
+            className: 'sweetWelcome',
         });
     }
 }
@@ -354,7 +352,7 @@ function validarConsulta(e) {
         swal({
             icon: "error",
             text: "Por favor coloque su consulta en el formulario.",
-            className: "sweetWelcome",
+            className: 'sweetWelcome',
         });
     }
 }
@@ -381,17 +379,15 @@ function enviar(e) {
             swal({
                 icon: "success",
                 text: "Su formulario ha sido enviado.",
-                className: "sweetWelcome",
+                className: 'sweetWelcome',
             });
         }).fail(function (error) {
             swal({
                 icon: "error",
                 text: 'Oops... ' + JSON.stringify(error),
-                className: "sweetWelcome",
+                className: 'sweetWelcome',
             });
         });
-
-
     }
 }
 
