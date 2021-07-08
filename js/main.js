@@ -317,6 +317,7 @@ function agregarAlCarrito(id) {
     botonEliminar.addEventListener(`click`, () => {
         botonEliminar.parentElement.remove();
         carritoDeCompras = carritoDeCompras.filter((el) => el.id != agregarSuscripcion.id);
+        localStorage.removeItem('carritoDeCompras');
         $(`#carroVacio`).show();
     })
 
