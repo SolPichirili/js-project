@@ -113,6 +113,16 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $("#scrollArriba").click(function (event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $("#menu").offset().top
+        }, 2000);
+    });
+});
+
+
 //Personajes
 class Personaje {
     constructor(tipo, poder, afiliacion, arma, imagen, id) {
@@ -251,12 +261,12 @@ $.get(`ajax.json`, function mostrarSuscripciones(data) {
         let tarjeta = document.createElement(`card`);
 
         tarjeta.innerHTML += `
-                            <div class="card">
+                            <div class="card tarjeta">
                                 <img src="${prod.img}" class="card-img-top img-fluid">
                                     <div class="card-body">
-                                        <h5 class="parrafos card-title">${prod.tiempo}</h5>
-                                            <p class="parrafos card-text">${prod.precio}</p>
-                                            <button id="boton${prod.id}" class="botonAgregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+                                        <h5 class="parrafotarj card-title">${prod.tiempo}</h5>
+                                            <p class="parrafotarj card-text">${prod.precio}</p>
+                                            <button id="boton${prod.id}" class="boton botonAgregar">Agregar <i class="fas fa-shopping-cart"></i></button>
                                     </div>
                                 </div>`
 
@@ -289,7 +299,7 @@ function agregarAlCarrito(id) {
 
     productoEnCarrito.innerHTML = `<p>${agregarSuscripcion.tiempo}</p>
                                     <p>${agregarSuscripcion.precio}</p>
-                                    <button class="botonGris cesto" id="${agregarSuscripcion.id}"><i class="fas fa-trash-alt cesto"></button>`
+                                    <button class="boton cesto" id="${agregarSuscripcion.id}"><i class="fas fa-trash-alt cesto"></button>`
 
 
     contenedorCarrito.appendChild(productoEnCarrito);

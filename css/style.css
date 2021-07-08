@@ -42,6 +42,8 @@ body {
 
 .fondo {
     background-image: url(/imagenes/castillo.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .modals{
@@ -107,14 +109,6 @@ h1 {
     font-weight: 200;
 }
 
-.botonGris {
-    font-family: 'Newsreader', serif;
-    font-weight: bolder;
-    background-color: grey;
-    border: 0.1rem solid grey;
-    border-radius: 0.5rem;
-}
-
 .cesto {
     padding: 0.2rem;
     width: 20%;
@@ -149,22 +143,28 @@ label {
     font-family: 'Newsreader', serif;
 }
 
-.botonAgregar {
-    border-radius: 0.5rem;
-    border: 0.2rem solid grey;
-    background-color: black;
-    color: white;
+.tarjeta{
+    background-color: #99b2dd;
+}
+
+.parrafotarj{
+    color: black;
     font-family: 'Newsreader', serif;
+    font-size: 1.2rem;
+    margin: 2rem auto;
+    text-align: justify;
+}
+
+.botonAgregar {
     padding: 0.4rem;
 }
 
-
-.botonReset {
-    border-radius: 0.5rem;
-    border: 0.2rem solid grey;
-    background-color: black;
-    color: white;
+.labelForm {
     font-family: 'Newsreader', serif;
+    font-size: 1.2rem;
+    text-align: justify;
+    color: #99b2dd;
+    font-weight: 200;
 }
 
 footer {
@@ -181,4 +181,18 @@ footer {
 .menuAlPie li a {
     text-decoration: none;
     color: black;
+}
+
+.menuAlPie li a:hover{
+    color: #061066;
+}
+
+.flechaScroll{
+    color: #061066;
+    font-size: 3rem;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    right: 1rem;
+    z-index: 2;
 }
