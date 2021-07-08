@@ -13,7 +13,11 @@ function recuperar() {
 
 function comenzar() {
     if (localStorage.usuario) {
-        $(`#botonUsuario`).animate({ marginLeft: `25rem` });
+        if (window.matchMedia("(min-width: 300px) and (max-width:540px").matches) {
+            $(`#botonUsuario`).animate({ marginLeft: `15rem` })
+        } else {
+            $(`#botonUsuario`).animate({ marginLeft: `25rem` });
+        }
         primeraVez.innerText = `Bienvenidx ${arrayDeDatos[0].nombre}`;
         tituloModal.remove();
         primeraVezModal.innerHTML = `<p class="parrafos">Ya se encuentra registradx.</p>`
@@ -42,7 +46,11 @@ function tomarDatos(e) {
                     className: "sweetWelcome",
                 });
                 primeraVez.innerText = `Bienvenidx ${this.nombre}`;
-                $(`#botonUsuario`).animate({ marginLeft: `25rem` });
+                if (window.matchMedia("(min-width: 300px) and (max-width:540px").matches) {
+                    $(`#botonUsuario`).animate({ marginLeft: `15rem` })
+                } else {
+                    $(`#botonUsuario`).animate({ marginLeft: `25rem` });
+                }
                 tituloModal.remove();
                 primeraVezModal.innerHTML = `<p class="parrafos">Ya se encuentra registradx.</p>`
             }

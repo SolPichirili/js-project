@@ -41,7 +41,7 @@ body {
 }
 
 .fondo {
-    background-image: url(/imagenes/castillo.jpg);
+    background-image: url(/imagenes/castillo.png);
     background-repeat: no-repeat;
     height: 100vh;
 }
@@ -71,6 +71,11 @@ body {
 .swal-text {
     color: #99b2dd;
     font-family: 'Newsreader', serif;
+}
+
+.cesto {
+    padding: 0.2rem;
+    width: 20%;
 }
 
 h1 {
@@ -107,11 +112,6 @@ h1 {
     text-align: justify;
     color: #99b2dd;
     font-weight: 200;
-}
-
-.cesto {
-    padding: 0.2rem;
-    width: 20%;
 }
 
 .imagenesPersj {
@@ -195,4 +195,17 @@ footer {
     bottom: 0;
     right: 1rem;
     z-index: 2;
+}
+
+@media screen and (min-width:300px) and (max-width:540px) {
+    .suscripciones{
+        display: grid;
+        grid-template-columns: repeat(2, 40fr);
+        grid-template-rows: repeat(2, 40fr);
+    }
+
+    .tarjeta{
+        margin-top: 1rem;
+    }
+    
 }
